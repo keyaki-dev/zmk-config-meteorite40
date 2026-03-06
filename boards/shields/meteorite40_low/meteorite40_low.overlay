@@ -10,6 +10,7 @@
     chosen {
         zmk,kscan = &meteorite40_scan;
         zmk,physical-layout = &LOW_PROFILE_DEFAULT;
+        zmk,backlight = &{/leds};
         //transform = <&default_transform>;
     };
 
