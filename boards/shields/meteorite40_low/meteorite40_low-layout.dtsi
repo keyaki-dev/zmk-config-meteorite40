@@ -1,7 +1,7 @@
 #include <physical_layouts.dtsi>
 
 / {
-    LOW_PROFILE_TYPE_A: low_profile_type_a {
+    LOW_PROFILE_DEFAULT: LOW_PROFILE_TYPE_A: low_profile_type_a {
         compatible = "zmk,physical-layout";
         display-name = "low_profile_type_A";
 
@@ -61,7 +61,7 @@
 
     LOW_PROFILE_TYPE_B: low_profile_type_b {
         compatible = "zmk,physical-layout";
-        display-name = "low_profile_typeB";
+        display-name = "low_profile_type_B";
 
         keys //                  w    h   x     y  rot rx ry
             =
