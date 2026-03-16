@@ -107,7 +107,7 @@
 
     keymap {
         compatible = "zmk,keymap";
-        layout = &LOW_PROFILE_DEFAULT;
+        layout = &LOW_PROFILE_TYPE_B;
 
         win_default_layer {
             display-name = "BASE";

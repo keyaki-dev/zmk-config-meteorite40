@@ -13,7 +13,7 @@
 / {
     chosen {
         zmk,kscan = &meteorite40_scan;
-        zmk,physical-layout = &LOW_PROFILE_TYPE_A;
+        zmk,physical-layout = &LOW_PROFILE_TYPE_B;
         //transform = <&default_transform>;
     };
 
