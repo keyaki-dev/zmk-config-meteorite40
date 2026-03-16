@@ -3,7 +3,7 @@
 / {
     LOW_PROFILE_DEFAULT: LOW_PROFILE_TYPE_A: low_profile_type_a {
         compatible = "zmk,physical-layout";
-        display-name = "low_profile_type_A";
+        display-name = "Type A";
 
         keys //                  w    h   x     y  rot rx ry
             =
@@ -61,7 +61,7 @@
 
     LOW_PROFILE_TYPE_B: low_profile_type_b {
         compatible = "zmk,physical-layout";
-        display-name = "low_profile_type_B";
+        display-name = "Type B";
 
         keys //                  w    h   x     y  rot rx ry
             =
