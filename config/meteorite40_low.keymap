@@ -114,19 +114,19 @@
             display-name = "BASE";
             bindings = <
                 &kp Q        &kp W       &kp E        &kp R        &kp T                                 &kp Y        &kp U       &kp I       &kp O  &kp P
-                &mt LSHIFT A &kp S       &kp D        &kp F        &kp G                                 &kp H        &kp J       &kp K       &kp L  &kp MINUS
+                &mt LSHIFT A &kp S       &kp D        &kp F        &kp G                                 &kp H        &kp J       &kp K       &kp L  &mt LSHIFT MINUS
                 &kp Z        &kp X       &kp C        &kp V        &kp B        &mkp MB1     &mkp MB2    &kp N        &kp M       &kp COMMA   &kp DOT  &lt 4 SLASH
-                                    &kp LWIN  &mt LCTRL TAB  &mt LSHIFT SPACE  &lt 1 SPACE  &lt 2 ENTER  &lt 2 BSPC  &lt 3 DEL  &kp RALT
+                                    &mt LALT TAB  &mt LCMD LANG2  &lt 1 SPACE  &none  &none  &mt RSHIFT ENTER  &mt RCMD LANG1  &mt LCTRL ESC
             >;
         };
 
         layer_1 {
-            display-name = "SYMBOLS";
+            display-name = "SPACE";
             bindings = <
-                &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT                       &none      &kp LPAR   &kp RPAR   &kp LBKT   &kp RBKT
-                &kp CARET  &kp AMPS  &kp STAR  &kp BSLH  &kp PIPE                        &kp SEMI   &kp COLON  &kp SQT    &kp DQT    &kp EQUAL
-                &none      &none     &none     &none     &none      &mkp MB4  &mkp MB5   &kp GRAVE  &kp TILDE  &kp LBRC   &kp RBRC   &kp PLUS
-                                     &trans     &trans    &trans    &trans    &trans     &kp DEL    &trans     &trans
+                &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                          &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+                &kp GRAVE  &kp LBKT  &kp RBKT  &kp SEMI  &kp SQT                         &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans
+                &none      &none     &none     &none     &none      &mkp MB4  &mkp MB5   &kp MINUS  &kp EQUAL  &kp HOME   &kp END    &trans
+                                     &trans    &trans    &trans     &trans    &trans     &kp BSPC   &trans     &trans
             >;
         };
 
