@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+# 最新の成功ビルドからUF2ファームウェアを取得する。
+#
+# Usage:
+#   bin/fetch-uf2 [profile] [dest]
+#
+#     profile : low (default) | normal
+#     dest    : 保存先ディレクトリ (default: ~/Downloads/mt40)
+#
+# 依存:
+#   - gh (GitHub CLI) 認証済み
+#   - 本リポジトリのディレクトリ内で実行すること
+
+set -euo pipefail
+
+PROFILE="${1:-low}"
+DEST="${2:-$HOME/Downloads/mt40}"
+
+REPO_SLUG=$(gh repo view --json nameWithOwner --jq .nameWithOwner)
+
+case "$PROFILE" in
+  low|lp)    PATTERN="meteorite40_low" ;;
+  normal|np) PATTERN="meteorite40-" ;;
+  *)
+    echo "不明なプロファイル: $PROFILE (low | normal)" >&2
+    exit 1
+    ;;
+esac
+
+RUN_ID=$(gh run list \
+  --repo "$REPO_SLUG" \
+  --workflow build.yml \
+  --status success \
+  --limit 1 \
+  --json databaseId \
+  --jq '.[0].databaseId')
+
+if [ -z "${RUN_ID:-}" ] || [ "$RUN_ID" = "null" ]; then
+  echo "成功済みのビルドが見つかりません。push 後にビルドが完了しているか確認してください。" >&2
+  exit 1
+fi
+
+TMP_DIR=$(mktemp -d)
+trap 'rm -rf "$TMP_DIR"' EXIT
+
+echo "→ run $RUN_ID から Artifact をダウンロード中…"
+gh run download "$RUN_ID" --repo "$REPO_SLUG" --dir "$TMP_DIR" >/dev/null
+
+UF2_FILE=$(find "$TMP_DIR" -name "${PATTERN}*.uf2" | head -n1)
+if [ -z "${UF2_FILE:-}" ]; then
+  echo "${PATTERN}*.uf2 が Artifact に見つかりませんでした" >&2
+  exit 1
+fi
+
+mkdir -p "$DEST"
+cp "$UF2_FILE" "$DEST/"
+echo "✓ $DEST/$(basename "$UF2_FILE")"
