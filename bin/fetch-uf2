@@ -16,7 +16,7 @@ set -euo pipefail
 PROFILE="${1:-low}"
 DEST="${2:-$HOME/Downloads/mt40}"
 
-REPO_SLUG=$(gh repo view --json nameWithOwner --jq .nameWithOwner)
+REPO_SLUG=$(git config --get remote.origin.url | sed -E 's#.*github\.com[:/]##; s#\.git$##')
 
 case "$PROFILE" in
   low|lp)    PATTERN="meteorite40_low" ;;
