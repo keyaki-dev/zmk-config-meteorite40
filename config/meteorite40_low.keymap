@@ -80,30 +80,6 @@
             key-positions = <0 1>; /* Q + W */
             layers = <0>;
         };
-
-        line_home {
-            bindings = <&mosk HOME LG(LEFT)>;
-            key-positions = <16 17>; /* J + K (on layer 2) */
-            layers = <2>;
-        };
-
-        line_end {
-            bindings = <&mosk END LG(RIGHT)>;
-            key-positions = <18 19>; /* L + - (on layer 2) */
-            layers = <2>;
-        };
-
-        doc_home {
-            bindings = <&mosk LC(HOME) LG(UP)>;
-            key-positions = <16 18>; /* J + L (on layer 2) */
-            layers = <2>;
-        };
-
-        doc_end {
-            bindings = <&mosk LC(END) LG(DOWN)>;
-            key-positions = <17 19>; /* K + - (on layer 2) */
-            layers = <2>;
-        };
     };
 
     keymap {
