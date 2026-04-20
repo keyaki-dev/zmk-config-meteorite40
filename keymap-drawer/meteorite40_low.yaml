@@ -218,15 +218,3 @@ combos:
 - p: [0, 1]
   k: TAB
   l: [BASE]
-- p: [16, 17]
-  k: '&mosk HOME LG(LEFT)'
-  l: [NUM / ARROW]
-- p: [18, 19]
-  k: '&mosk END LG(RIGHT)'
-  l: [NUM / ARROW]
-- p: [16, 18]
-  k: '&mosk LC(HOME) LG(UP)'
-  l: [NUM / ARROW]
-- p: [17, 19]
-  k: '&mosk LC(END) LG(DOWN)'
-  l: [NUM / ARROW]
