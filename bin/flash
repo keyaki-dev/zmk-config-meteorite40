@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+# 最新ビルドのUF2を取得して meteorite40 に書き込む。
+#
+# Usage:
+#   bin/flash [profile]
+#
+#     profile : low (default) | normal
+#
+# 実行後に / + N（長押し）または Xiao BLE のリセットボタン2連打で
+# ブートローダーモードに入ってください。ドライブ検出後、自動で書き込みます。
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROFILE="${1:-low}"
+DEST="${HOME}/Downloads/mt40"
+DRIVE="/Volumes/XIAO-SENSE"
+TIMEOUT=180
+
+"$SCRIPT_DIR/fetch-uf2" "$PROFILE" "$DEST"
+
+case "$PROFILE" in
+  low|lp)    PATTERN="meteorite40_low" ;;
+  normal|np) PATTERN="meteorite40-" ;;
+esac
+UF2_FILE=$(find "$DEST" -maxdepth 1 -name "${PATTERN}*.uf2" | head -n1)
+
+if [ -z "${UF2_FILE:-}" ]; then
+  echo "UF2 ファイルが見つかりません: $DEST" >&2
+  exit 1
+fi
+
+echo ""
+echo "→ キーボードをブートローダーモードにしてください"
+echo "  ( / + N を長押し、または Xiao BLEのリセットボタン2連打 )"
+echo ""
+echo "  最大 ${TIMEOUT}秒 待機します…"
+
+elapsed=0
+while [ ! -d "$DRIVE" ] && [ $elapsed -lt $TIMEOUT ]; do
+  sleep 1
+  elapsed=$((elapsed + 1))
+done
+
+if [ ! -d "$DRIVE" ]; then
+  echo "タイムアウト: ブートローダーが検出されませんでした" >&2
+  exit 1
+fi
+
+echo "✓ ブートローダー検出: $DRIVE"
+echo "→ $(basename "$UF2_FILE") を書き込み中…"
+
+# FAT の拡張属性コピーで失敗してもデータ部分は書けているため無視
+cp -X "$UF2_FILE" "$DRIVE/" 2>/dev/null || true
+
+# アンマウント待ち（= 書き込み完了 → 自動リセット）
+elapsed=0
+while [ -d "$DRIVE" ] && [ $elapsed -lt 60 ]; do
+  sleep 1
+  elapsed=$((elapsed + 1))
+done
+
+if [ -d "$DRIVE" ]; then
+  echo "警告: ドライブが自動アンマウントされませんでした。書き込み状態を確認してください" >&2
+  exit 1
+fi
+
+echo "✓ 書き込み完了。新ファームウェアで起動します"
