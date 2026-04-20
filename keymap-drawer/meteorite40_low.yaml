@@ -20,7 +20,7 @@ layers:
   - J
   - K
   - L
-  - '-'
+  - {t: '-', h: LSHIFT}
   - Z
   - X
   - C
@@ -33,35 +33,35 @@ layers:
   - ','
   - .
   - {t: /, h: SETTING}
-  - LWIN
-  - {t: TAB, h: LCTRL}
-  - {t: SPACE, h: LSHIFT}
-  - {t: SPACE, h: SYMBOLS}
-  - {t: ENTER, h: NUM / ARROW}
-  - {t: BSPC, h: NUM / ARROW}
-  - {t: DEL, h: FUNCTION}
-  - RALT
-  SYMBOLS:
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
+  - {t: TAB, h: LALT}
+  - {t: LANG2, h: LCMD}
+  - {t: SPACE, h: SPACE}
   - ''
-  - (
-  - )
+  - ''
+  - {t: ENTER, h: RSHIFT}
+  - {t: LANG1, h: RCMD}
+  - {t: ESC, h: LCTRL}
+  SPACE:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '`'
   - '['
   - ']'
-  - ^
-  - '&'
-  - '*'
-  - \
-  - '|'
   - ;
-  - ':'
   - ''''
-  - '"'
-  - '='
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - {t: ▽, type: trans}
   - ''
   - ''
   - ''
@@ -69,17 +69,17 @@ layers:
   - ''
   - '&mkp MB4'
   - '&mkp MB5'
-  - '`'
-  - '~'
-  - '{'
-  - '}'
-  - +
+  - '-'
+  - '='
+  - HOME
+  - END
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - DEL
+  - {t: ▽, type: trans}
+  - BSPC
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   NUM / ARROW:
@@ -119,7 +119,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -162,7 +162,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SETTING:
   - '&ccfg C_CPI_DN'
