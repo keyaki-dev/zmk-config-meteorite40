@@ -33,14 +33,14 @@ layers:
   - ','
   - .
   - {t: /, h: SETTING}
-  - {t: TAB, h: LALT}
   - {t: LANG2, h: LCMD}
   - {t: SPACE, h: L1}
+  - {t: TAB, h: LALT}
   - ''
   - ''
-  - {t: ENTER, h: RSHIFT}
-  - {t: LANG1, h: RCMD}
   - {t: ESC, h: LCTRL}
+  - ENTER
+  - {t: LANG1, h: RCMD}
   L1:
   - '1'
   - '2'
@@ -75,8 +75,8 @@ layers:
   - END
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BSPC
