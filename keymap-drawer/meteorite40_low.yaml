@@ -35,13 +35,13 @@ layers:
   - {t: /, h: SETTING}
   - {t: TAB, h: LALT}
   - {t: LANG2, h: LCMD}
-  - {t: SPACE, h: SPACE}
+  - {t: SPACE, h: L1}
   - ''
   - ''
   - {t: ENTER, h: RSHIFT}
   - {t: LANG1, h: RCMD}
   - {t: ESC, h: LCTRL}
-  SPACE:
+  L1:
   - '1'
   - '2'
   - '3'
