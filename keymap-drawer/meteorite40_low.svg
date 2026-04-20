@@ -293,7 +293,9 @@ path.combo {
 <g transform="translate(518, 196)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">ENTER</text>
-</g>
+<a href="#NUM--ARROW">
+<text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 64%">NUM / ARROW</tspan></text>
+</a></g>
 <g transform="translate(574, 196)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">LANG1</text>
@@ -466,13 +468,13 @@ path.combo {
 <rect rx="6" ry="6" x="-47" y="-26" width="94" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(462, 196)" class="key keypos-37">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">BSPC</text>
-</g>
-<g transform="translate(518, 196)" class="key trans keypos-38">
+<g transform="translate(462, 196)" class="key trans keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
+</g>
+<g transform="translate(518, 196)" class="key keypos-38">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">BSPC</text>
 </g>
 <g transform="translate(574, 196)" class="key trans keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -634,9 +636,8 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(518, 196)" class="key trans keypos-38">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(518, 196)" class="key held keypos-38">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
 <g transform="translate(574, 196)" class="key trans keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>

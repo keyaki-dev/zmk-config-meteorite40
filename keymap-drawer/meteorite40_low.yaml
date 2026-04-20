@@ -39,7 +39,7 @@ layers:
   - ''
   - ''
   - {t: ESC, h: LCTRL}
-  - ENTER
+  - {t: ENTER, h: NUM / ARROW}
   - {t: LANG1, h: RCMD}
   L1:
   - '1'
@@ -79,8 +79,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - BSPC
   - {t: ▽, type: trans}
+  - BSPC
   - {t: ▽, type: trans}
   NUM / ARROW:
   - '*'
@@ -121,7 +121,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   FUNCTION:
   - F1
