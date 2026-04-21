@@ -10,7 +10,7 @@
 #define SCROLL_LAYER_1 2        // スクロールを有効にするレイヤー1（固定）
 #define SCROLL_LAYER_2 3        // スクロールを有効にするレイヤー2
 #define INVERT_X 1              // X軸のスクロールの反転
-#define INVERT_Y 0              // Y軸のスクロールの反転
+#define INVERT_Y 1              // Y軸のスクロールの反転
 
 #define SCALING_MODE 1          // 0: 無効, 1: 有効
 #define SCROLL_SCALING_MODE 1   // 0: 無効, 1: 有効
