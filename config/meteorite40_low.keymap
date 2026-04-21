@@ -80,6 +80,18 @@
             key-positions = <0 1>; /* Q + W */
             layers = <0>;
         };
+
+        lbrc {
+            bindings = <&kp LBRC>;
+            key-positions = <15 16>; /* H + J */
+            layers = <0>;
+        };
+
+        rbrc {
+            bindings = <&kp RBRC>;
+            key-positions = <17 18>; /* K + L */
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -91,8 +103,8 @@
             bindings = <
                 &kp Q        &kp W       &kp E        &kp R        &kp T                                 &kp Y        &kp U       &kp I       &kp O  &kp P
                 &mt LSHIFT A &kp S       &kp D        &kp F        &kp G                                 &kp H        &kp J       &kp K       &kp L  &mt RSHIFT BSLH
-                &kp Z        &kp X       &kp C        &kp V        &kp B        &mkp MB1     &mkp MB2    &kp N        &kp M       &kp COMMA   &kp DOT  &lt 4 SLASH
-                                    &mt LCMD LANG2  &lt 1 SPACE  &mt LALT TAB  &none  &none  &mt LCTRL ESC  &lt 2 ENTER  &mt RCMD LANG1
+                &kp Z        &kp X       &kp C        &kp V        &kp B        &mo 3        &mkp MB3    &kp N        &kp M       &kp COMMA   &kp DOT  &lt 4 SLASH
+                                    &mt LCMD LANG2  &lt 1 SPACE  &mt LALT TAB  &mkp MB1  &mkp MB2  &mt LCTRL ESC  &lt 2 ENTER  &mt RCMD LANG1
             >;
         };
 
