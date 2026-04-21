@@ -15,9 +15,9 @@
 #define SCALING_MODE 1          // 0: 無効, 1: 有効
 #define SCROLL_SCALING_MODE 1   // 0: 無効, 1: 有効
 #define OS_MODE_DEFAULT 0       // 0: Win, 1: Mac
-#define MAX_OUTPUT 300          // 出力の最大絶対値 |y|。既定 127
+#define MAX_OUTPUT 150          // 出力の最大絶対値 |y|。既定 127
 #define HALF_INPUT 50           // r=|x|/xs の xs（counts）。既定 50
-#define EXPONENT_TENTHS 12      // 指数 p を 0.1 分解能で指定（p*10、例: 15 は p=1.5）。既定 10（p=1.0）
+#define EXPONENT_TENTHS 10      // 指数 p を 0.1 分解能で指定（p*10、例: 15 は p=1.5）。既定 10（p=1.0）
 
 #define SCROLL_MAX_OUTPUT 300
 #define SCROLL_HALF_INPUT 55
