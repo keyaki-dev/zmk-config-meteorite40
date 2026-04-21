@@ -26,8 +26,8 @@ layers:
   - C
   - V
   - B
-  - '&mkp MB1'
-  - '&mkp MB2'
+  - FUNCTION
+  - '&mkp MB3'
   - N
   - M
   - ','
@@ -36,8 +36,8 @@ layers:
   - {t: LANG2, h: LCMD}
   - {t: SPACE, h: L1}
   - {t: TAB, h: LALT}
-  - ''
-  - ''
+  - '&mkp MB1'
+  - '&mkp MB2'
   - {t: ESC, h: LCTRL}
   - {t: ENTER, h: NUM / ARROW}
   - {t: LANG1, h: RCMD}
@@ -149,7 +149,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - {type: held}
   - ''
   - ''
   - ''
@@ -217,4 +217,10 @@ combos:
   l: [BASE]
 - p: [0, 1]
   k: TAB
+  l: [BASE]
+- p: [15, 16]
+  k: '{'
+  l: [BASE]
+- p: [17, 18]
+  k: '}'
   l: [BASE]
